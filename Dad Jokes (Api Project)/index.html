@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dad Jokes!</title>
+</head>
+<body>
+    <div>
+        <h1>Welcome to Dad Jokes!</h1>
+        <section class="api_body"></section>
+        <button id="fetchJoke">Get another Joke</button>
+    </div>
+    <script>
+
+        ///////////////////////////////////THIS IS BY PROMISE METHOD //////////////////////////////////////////
+
+
+        // const apiBody=document.querySelector(".api_body");
+        // const apiUrl="https://icanhazdadjoke.com/";
+        // const fetchData=()=>{
+        //   fetch(apiUrl,{
+        //         headers:{
+        //             Accept:"application/json",
+        //         },
+        //     }).then((res)=>{
+        //         console.log(res)
+        //         return res.json();
+        //     }).then((data)=>{
+        //         console.log(data.joke)
+        //         apiBody.innerHTML =data.joke;
+        //     }).catch((error)=>{
+        //       console.log(error)
+        //     })
+        // }
+        // document.getElementById("fetchJoke").addEventListener("click",fetchData)
+
+
+
+
+
+        ////////////////////////////////// THIS IS BY ASYNC AWAIT METHOD ////////////////////////////////////////
+
+           
+        //     const apiBody=document.querySelector(".api_body");
+        // const apiUrl="https://icanhazdadjoke.com/";
+
+
+        //   async function fetchData() {
+        //     const response= await fetch(apiUrl,{
+        //         headers:{
+        //             Accept:"application/json"
+        //         },
+        //     })
+        //     console.log(response)
+
+        //     const data= await response.json()
+        //     console.log(data.joke)
+        //     apiBody.innerHTML =data.joke
+        //   }
+          
+        //   fetchData()
+        // document.getElementById("fetchJoke").addEventListener("click",fetchData);
+
+
+
+
+
+
+   /////////////////////////////////////////////////THIS IS BY ERROR HANDLING //////////////////////////////////
+           
+
+
+   const apiBody=document.querySelector(".api_body");
+        const apiUrl="https://icanhazdadjoke.comm/";
+
+
+          async function fetchData() {
+           try {
+            const response= await fetch(apiUrl,{
+                headers:{
+                    Accept:"application/json"
+                },
+            })
+            console.log(response)
+
+            const data= await response.json()
+            console.log(data.joke)
+            apiBody.innerHTML =data.joke
+           } catch (error) {
+               console.log(error)
+               apiBody.innerHTML=`api is not working`;
+           }
+          }
+          
+          fetchData()
+        document.getElementById("fetchJoke").addEventListener("click",fetchData);
+
+
+    </script>
+</body>
+</html>
