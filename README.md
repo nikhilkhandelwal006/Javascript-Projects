@@ -34,8 +34,6 @@ Welcome to my JavaScript projects repository! This repository contains several p
 9. **Windows 11 Landing Page**
    - A static landing page resembling the design of Windows 11. It's built with HTML for structure, CSS for styling, and includes JavaScript for interactive elements like toggling the Start menu.
 
-10. **E-commerce Website**
-    - A mock-up e-commerce website demonstrating product listings, shopping cart functionality, and a checkout process. It's built using HTML/CSS for layout and styling, and JavaScript for cart management and user interaction.
 
 ## Usage
 
